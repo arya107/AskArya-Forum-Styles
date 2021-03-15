@@ -10,11 +10,89 @@
 }
 
 /* All Pages     ------------------------  */
+
+:root {
+  --purple: #7c00ff;
+  --black: #000;
+  --white: #fff;
+  --aqua: #97fffe;
+  --blue: #97fffe;
+  --pink: #f25ff5;
+  --green: #18b087;
+  --red: #f0323c;
+  --orange: #ff8a5c;
+  --yellow: #fddb60;
+  --purple-lighter: #efe6fd;
+  --purple-light: #c5b1ff;
+  --purple-dark: #3e0080;
+  --grey: #eaeaea;
+  --light: #f9f9f9;
+  --gradient-black: linear-gradient(60deg, #000, #2b2b2b);
+  --radius: 24px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --shadow-light: 0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  --display: 80px;
+  --heading-one: 68px;
+  --heading-two: 48px;
+  --heading-three: 32px;
+  --heading-four: 24px;
+  --heading-five: 18px;
+  --body-bigger: 24px;
+  --body-medium: 22px;
+  --body: 18px;
+  --caption: 15px;
+  --meta: 14px;
+  --micro: 12px;
+  --normal: 400;
+  --medium: 500;
+  --bold: 600;
+  --heavy: 800;
+  --scale: 1;
+  --scale-nav-link: 1;
+  --container: 1600px;
+  --padding-mobile: 5%;
+  --padding-tablet: 24px;
+  --padding-dektop: 80px;
+  --transition: cubic-bezier(0.24, 0.82, 0.43, 1.05);
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
 *:not(i) {
   font-family: IranSans, sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+}
+
+[tabindex='-1']:focus {
+  outline: 0 !important;
 }
 
 .header .forum-logo {
@@ -39,6 +117,10 @@
     margin-right: 10px;
     color: rgb(99, 99, 99);
   }
+}
+
+.footer {
+  margin-top: 60vh;
 }
 
 .navbar-nav > li > .dropdown-menu {
@@ -86,21 +168,20 @@
 }
 
 .topic .content {
-  font-size: 1.2em;
+  font-size: calc(var(--body) * var(--scale));
+  letter-spacing: 0.01875rem;
   text-align: justify;
+}
+@media (max-width: 719.98px) {
+  .topic .content {
+    font-size: 1rem;
+  }
 }
 
 .topic .posts > [component='post'] {
-  border-left: 1px solid #ed4b6f;
+  border-left: 1px dotted #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  border-right: 1px solid #cfcfcf;
 }
 
-/* HTML ELEMENTS */
-
-/* <h1 style="color:white;font-size:2.5em;background-color:#EF476F;padding:1em;border-radius:10px;">Welcome to Ask Arya's forum</h1> */
-
-/* <footer style="color:#ed4b6f;font-size:0.9em;font-weight:bold;margin-top:5em;margin-bottom:0;" id="footer" class="container footer">
-	<div>
-      Powered by 
-		<a target="_blank" href="https://ask-arya.com">Ask Arya Forum</a>
-	</div>
-</footer>*/
+/* Recent Page     ------------------------  */
