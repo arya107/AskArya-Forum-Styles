@@ -267,6 +267,7 @@
 
 .page-topic .topic .posts li {
   border: 1px dashed rgb(252, 252, 252);
+  border-left: 8px solid rgb(231, 231, 231);
   background-color: rgb(253, 253, 253) !important;
   margin-bottom: 1.2em !important;
   border-radius: 10px !important;
